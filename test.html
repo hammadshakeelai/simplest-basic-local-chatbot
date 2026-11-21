@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- Load PyScript 2026.7.3 -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+</head>
+<body>
+    <!-- button -->
+    <button py-click="myfunc">Press Button</button>
+
+    <!-- response -->
+    <p id="response"></p>
+
+    <!-- Python Code -->
+    <script type="py">
+        from pyscript import document
+
+        def myfunc(event):
+            # Print to the browser's developer console
+            print("Button was pressed!")
+            # Display text directly on the webpage
+            response_p = document.querySelector("#response")
+            response_p.innerText = "Hello from Python!"
+    </script>
+</body>
+</html>
